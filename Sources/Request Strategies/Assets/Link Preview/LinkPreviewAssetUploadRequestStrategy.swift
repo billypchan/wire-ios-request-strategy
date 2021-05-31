@@ -19,6 +19,8 @@
 
 import Foundation
 import WireLinkPreview
+import WireDataModel
+import WireProtos
 
 public final class LinkPreviewDetectorHelper : NSObject {
     fileprivate static var _test_debug_linkPreviewDetector : LinkPreviewDetectorType? = nil
@@ -150,7 +152,7 @@ extension LinkPreviewAssetUploadRequestStrategy : ZMUpstreamTranscoder {
             let updatedText = Text.with {
                 $0.content = messageText
                 $0.mentions = mentions.compactMap {
-                    WireProtos.Mention.createMention($0)                    
+                    MentionFactory.createMention(mention: $0)
                 }
                 $0.linkPreview = [linkPreview]
             }
