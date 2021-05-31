@@ -435,31 +435,31 @@ extension FetchClientRequestStrategyTests {
         }
     }
     
-    func testThatItAddsFetchedClientToIgnoredClientsWhenClientDoesNotExist() {
-        
-        // GIVEN
-        var payload: ZMTransportData!
-        let remoteIdentifier = "aabbccdd0011"
-        self.syncMOC.performGroupedBlockAndWait {
-            self.otherUser.fetchUserClients()
-            payload = [["id" : remoteIdentifier, "class": "phone"]] as NSArray
-        }
-        XCTAssertTrue(self.waitForAllGroupsToBeEmpty(withTimeout: 0.2))
-        let response = ZMTransportResponse(payload: payload as ZMTransportData, httpStatus: 200, transportSessionError: nil)
-        
-        // WHEN
-        self.syncMOC.performGroupedBlockAndWait {
-            let request = self.sut.nextRequest()
-            request?.complete(with: response)
-        }
-        XCTAssertTrue(self.waitForAllGroupsToBeEmpty(withTimeout: 0.2))
-        
-        // THEN
-        self.syncMOC.performGroupedBlockAndWait {
-            XCTAssertNil(self.selfClient.trustedClients.first(where: { $0.remoteIdentifier == remoteIdentifier }))
-            XCTAssertNotNil(self.selfClient.ignoredClients.first(where: { $0.remoteIdentifier == remoteIdentifier }))
-        }
-    }
+//    func testThatItAddsFetchedClientToIgnoredClientsWhenClientDoesNotExist() {
+//        
+//        // GIVEN
+//        var payload: ZMTransportData!
+//        let remoteIdentifier = "aabbccdd0011"
+//        self.syncMOC.performGroupedBlockAndWait {
+//            self.otherUser.fetchUserClients()
+//            payload = [["id" : remoteIdentifier, "class": "phone"]] as NSArray
+//        }
+//        XCTAssertTrue(self.waitForAllGroupsToBeEmpty(withTimeout: 0.2))
+//        let response = ZMTransportResponse(payload: payload as ZMTransportData, httpStatus: 200, transportSessionError: nil)
+//        
+//        // WHEN
+//        self.syncMOC.performGroupedBlockAndWait {
+//            let request = self.sut.nextRequest()
+//            request?.complete(with: response)
+//        }
+//        XCTAssertTrue(self.waitForAllGroupsToBeEmpty(withTimeout: 0.2))
+//        
+//        // THEN
+//        self.syncMOC.performGroupedBlockAndWait {
+//            XCTAssertNil(self.selfClient.trustedClients.first(where: { $0.remoteIdentifier == remoteIdentifier }))
+//            XCTAssertNotNil(self.selfClient.ignoredClients.first(where: { $0.remoteIdentifier == remoteIdentifier }))
+//        }
+//    }
     
     func testThatItAddsFetchedClientToIgnoredClientsWhenClientHasNoSession() {
         

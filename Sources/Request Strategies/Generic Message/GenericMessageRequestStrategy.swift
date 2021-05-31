@@ -18,7 +18,8 @@
 
 import Foundation
 
-@objcMembers public class GenericMessageEntity : NSObject, OTREntity {
+//@objcMembers
+public class GenericMessageEntity : NSObject, OTREntity {
 
     public enum Recipients {
         case conversationParticipants

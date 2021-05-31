@@ -79,6 +79,8 @@ class AssetsPreprocessorTests: MessagingTestBase {
         
         // when
         sut.objectsDidChange(Set(arrayLiteral: message))
+        
+        ///TODO: crash for ireRequestStrategyTestHost[13638:432101] [db] Failed to initialize client context with error Error Domain=NSOSStatusErrorDomain Code=-10817 "(null)" UserInfo={_LSFunction=_LSSchemaConfigureForStore, ExpectedSimulatorHash={length = 32, bytes = 0x15dde658 ed2a1267 ab2496d7 34f186ad ... ec431c65 02d68f35 }, _LSLine=409, WrongSimulatorHash={length = 32, bytes = 0xaf25dda9 e45baa35 610eaabd 5bc09901 ... 9cbe61f3 81d7b9d9 }}
         XCTAssertTrue(waitForAllGroupsToBeEmpty(withTimeout: 0.5))
         
         // then
