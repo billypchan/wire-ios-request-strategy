@@ -415,7 +415,6 @@
 		F1E47FE9207E0B72008D4299 /* project.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = project.xcconfig; sourceTree = "<group>"; };
 		F1E47FEA207E0B72008D4299 /* ios.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = ios.xcconfig; sourceTree = "<group>"; };
 		F1E47FEB207E0B72008D4299 /* tests.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = tests.xcconfig; sourceTree = "<group>"; };
-		F1E47FEC207E0B72008D4299 /* swift.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = swift.xcconfig; sourceTree = "<group>"; };
 		F1E47FED207E0B72008D4299 /* project-debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "project-debug.xcconfig"; sourceTree = "<group>"; };
 		F1E47FEE207E0B72008D4299 /* warnings-debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "warnings-debug.xcconfig"; sourceTree = "<group>"; };
 		F963E8D91D955D4600098AD3 /* AssetRequestFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssetRequestFactory.swift; sourceTree = "<group>"; };
@@ -951,7 +950,6 @@
 				F1E47FE9207E0B72008D4299 /* project.xcconfig */,
 				F1E47FEA207E0B72008D4299 /* ios.xcconfig */,
 				F1E47FEB207E0B72008D4299 /* tests.xcconfig */,
-				F1E47FEC207E0B72008D4299 /* swift.xcconfig */,
 				F1E47FED207E0B72008D4299 /* project-debug.xcconfig */,
 				F1E47FEE207E0B72008D4299 /* warnings-debug.xcconfig */,
 			);
@@ -1082,7 +1080,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 1130;
+				LastUpgradeCheck = 1250;
 				ORGANIZATIONNAME = "Wire GmbH";
 				TargetAttributes = {
 					166901691D707509000FE4AF = {
