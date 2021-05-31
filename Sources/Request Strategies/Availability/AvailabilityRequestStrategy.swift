@@ -41,6 +41,12 @@ public class AvailabilityRequestStrategy: AbstractRequestStrategy {
     }
     
 }
+///TODO: move this from DM to here?
+extension WireProtos.Availability: MessageCapable {
+    public func setContent(on message: inout GenericMessage) {
+        message.availability = self
+    }
+}
 
 extension AvailabilityRequestStrategy: ZMUpstreamTranscoder {
 
