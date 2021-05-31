@@ -149,7 +149,9 @@ extension LinkPreviewAssetUploadRequestStrategy : ZMUpstreamTranscoder {
 
             let updatedText = Text.with {
                 $0.content = messageText
-                $0.mentions = mentions.compactMap { WireProtos.Mention($0) }
+                $0.mentions = mentions.compactMap {
+                    WireProtos.Mention.createMention($0)                    
+                }
                 $0.linkPreview = [linkPreview]
             }
 
