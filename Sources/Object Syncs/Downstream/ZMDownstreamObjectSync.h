@@ -26,7 +26,7 @@
 @class ZMManagedObject;
 @class ZMSyncOperationSet;
 @class NSManagedObjectContext;
-@protocol ZMDownstreamTranscoder;
+//@protocol ZMDownstreamTranscoder;
 @class ZMTransportResponse;
 
 

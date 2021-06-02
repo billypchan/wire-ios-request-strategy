@@ -191,7 +191,7 @@ class ZMDownstreamObjectSync: NSObject, ZMObjectSync {
     }
 }
 
-protocol ZMDownstreamTranscoder: NSObjectProtocol {
+@objc protocol ZMDownstreamTranscoder: NSObjectProtocol {
     func request(forFetching object: ZMManagedObject!, downstreamSync: ZMObjectSync!) -> ZMTransportRequest!
     func delete(_ object: ZMManagedObject!, with response: ZMTransportResponse!, downstreamSync: ZMObjectSync!)
     func update(_ object: ZMManagedObject!, with response: ZMTransportResponse!, downstreamSync: ZMObjectSync!)
