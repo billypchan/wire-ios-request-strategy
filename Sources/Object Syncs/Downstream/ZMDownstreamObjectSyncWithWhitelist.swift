@@ -12,19 +12,19 @@ import Foundation
 //}
 
 public class ZMDownstreamObjectSyncWithWhitelist: NSObject, ZMObjectSync, ZMDownstreamTranscoder {
-    func request(forFetching object: ZMManagedObject!, downstreamSync: ZMObjectSync!) -> ZMTransportRequest! {
+    public func request(forFetching object: ZMManagedObject!, downstreamSync: ZMObjectSync!) -> ZMTransportRequest! {
         return transcoder?.request(forFetching: object, downstreamSync: self)
     }
     
-    func delete(_ object: ZMManagedObject!, with response: ZMTransportResponse!, downstreamSync: ZMObjectSync!) {
+    public func delete(_ object: ZMManagedObject!, with response: ZMTransportResponse!, downstreamSync: ZMObjectSync!) {
          transcoder?.delete(object, with: response, downstreamSync: self)
     }
     
-    func update(_ object: ZMManagedObject!, with response: ZMTransportResponse!, downstreamSync: ZMObjectSync!) {
+    public func update(_ object: ZMManagedObject!, with response: ZMTransportResponse!, downstreamSync: ZMObjectSync!) {
         transcoder?.update(object, with: response, downstreamSync: self)
     }
     
-    func objectsDidChange(_ objects: Set<NSManagedObject>) {
+    public func objectsDidChange(_ objects: Set<NSManagedObject>) {
         ///TODO: check conversion
         let whitelistedObjectsThatChanges: NSMutableSet = NSMutableSet(object: whitelist!)
         
@@ -33,16 +33,16 @@ public class ZMDownstreamObjectSyncWithWhitelist: NSObject, ZMObjectSync, ZMDown
         innerDownstreamSync?.objectsDidChange(whitelistedObjectsThatChanges as! Set<NSManagedObject>)
     }
     
-    func fetchRequestForTrackedObjects() -> NSFetchRequest<NSFetchRequestResult>? {
+    public func fetchRequestForTrackedObjects() -> NSFetchRequest<NSFetchRequestResult>? {
         // I don't want to fetch. Only objects that are whitelisted should go through
         return nil
     }
     
-    func addTrackedObjects(_ objects: Set<NSManagedObject>) {
+    public func addTrackedObjects(_ objects: Set<NSManagedObject>) {
         // no-op
     }
     
-    var hasOutstandingItems: Bool
+    public var hasOutstandingItems: Bool
 //    func hasOutstandingItems() -> Bool
     {
         return innerDownstreamSync?.hasOutstandingItems ?? false
@@ -78,7 +78,7 @@ public class ZMDownstreamObjectSyncWithWhitelist: NSObject, ZMObjectSync, ZMDown
     }
 
     /// Returns a request to download the next object
-    func nextRequest() -> ZMTransportRequest? {
+    public func nextRequest() -> ZMTransportRequest? {
         return innerDownstreamSync?.nextRequest()
     }
 }

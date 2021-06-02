@@ -19,7 +19,6 @@
 
 
 #import "ZMDownstreamObjectSyncWithWhitelist.h"
-#import "ZMDownstreamObjectSync.h"
 #import <WireDataModel/ZMManagedObject.h>
 #import <WireRequestStrategy/WireRequestStrategy-Swift.h>
 
