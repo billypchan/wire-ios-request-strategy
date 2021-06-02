@@ -24,6 +24,8 @@
 #import "MockModelObjectContextFactory.h"
 #import "ZMDownstreamObjectSyncWithWhitelist+Internal.h"
 #import "ZMChangeTrackerBootstrap+Testing.h"
+//#import "WireRequestStrategyTests-Swift.h"
+#import <WireRequestStrategy/WireRequestStrategy-Swift.h>
 
 
 

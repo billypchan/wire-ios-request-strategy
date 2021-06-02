@@ -17,7 +17,6 @@
 		1621D22E1D75AC36007108C2 /* ZMChangeTrackerBootstrap.h in Headers */ = {isa = PBXBuildFile; fileRef = 1621D22B1D75AC36007108C2 /* ZMChangeTrackerBootstrap.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1621D22F1D75AC36007108C2 /* ZMChangeTrackerBootstrap.m in Sources */ = {isa = PBXBuildFile; fileRef = 1621D22C1D75AC36007108C2 /* ZMChangeTrackerBootstrap.m */; };
 		1621D2301D75AC36007108C2 /* ZMChangeTrackerBootstrap+Testing.h in Headers */ = {isa = PBXBuildFile; fileRef = 1621D22D1D75AC36007108C2 /* ZMChangeTrackerBootstrap+Testing.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1621D2621D75C745007108C2 /* ZMDownstreamObjectSyncWithWhitelistTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 166902191D709110000FE4AF /* ZMDownstreamObjectSyncWithWhitelistTests.m */; };
 		1621D2651D75C750007108C2 /* ZMLocallyModifiedObjectSetTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1669021C1D709110000FE4AF /* ZMLocallyModifiedObjectSetTests.m */; };
 		1621D2661D75C755007108C2 /* ZMLocallyModifiedObjectSyncStatusTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1669021D1D709110000FE4AF /* ZMLocallyModifiedObjectSyncStatusTests.m */; };
 		1621D2671D75C776007108C2 /* ZMRemoteIdentifierObjectSyncTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1669021E1D709110000FE4AF /* ZMRemoteIdentifierObjectSyncTests.m */; };
@@ -187,7 +186,6 @@
 		F19561F9202A13B4005347C0 /* ZMChangeTrackerBootstrapTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1666AA2B1D93FA0B00164C06 /* ZMChangeTrackerBootstrapTests.m */; };
 		F19561FB202A13C3005347C0 /* ZMSyncOperationSetTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1666AA2D1D93FBE200164C06 /* ZMSyncOperationSetTests.m */; };
 		F1956200202A141B005347C0 /* ZMDownstreamObjectSyncOrderingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 166902171D709110000FE4AF /* ZMDownstreamObjectSyncOrderingTests.m */; };
-		F1956201202A141E005347C0 /* ZMDownstreamObjectSyncTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 166902181D709110000FE4AF /* ZMDownstreamObjectSyncTests.m */; };
 		F1956204202A1506005347C0 /* ZMRequestGeneratorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1669021F1D709110000FE4AF /* ZMRequestGeneratorTests.m */; };
 		F963E8E11D955D5500098AD3 /* SharedProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = F963E8E01D955D5500098AD3 /* SharedProtocols.swift */; };
 /* End PBXBuildFile section */
@@ -1259,9 +1257,7 @@
 				BFF9446620F5F79F00531BC3 /* ImageV2DownloadRequestStrategyTests.swift in Sources */,
 				F19561F1202A1325005347C0 /* ZMSingleRequestSyncTests.m in Sources */,
 				F19561F7202A1389005347C0 /* ZMLocallyInsertedObjectSetTests.m in Sources */,
-				F1956201202A141E005347C0 /* ZMDownstreamObjectSyncTests.m in Sources */,
 				F18401F32073C26C00E9F4CC /* AssetClientMessageRequestStrategyTests.swift in Sources */,
-				1621D2621D75C745007108C2 /* ZMDownstreamObjectSyncWithWhitelistTests.m in Sources */,
 				1621D2291D75AB2D007108C2 /* MockEntity2.m in Sources */,
 				F18401DB2073C25300E9F4CC /* CryptoBoxUpdateEventsTests.swift in Sources */,
 				D5D65A062073C8F800D7F3C3 /* AssetRequestFactoryTests.swift in Sources */,
