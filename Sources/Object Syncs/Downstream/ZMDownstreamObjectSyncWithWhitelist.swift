@@ -55,7 +55,7 @@ public class ZMDownstreamObjectSyncWithWhitelist: NSObject, ZMObjectSync, ZMDown
     private weak var transcoder: ZMDownstreamTranscoder?
 
     /// @param predicateForObjectsToDownload the predicate that will be used to select which object to download
-    init(
+    public init(
         transcoder: ZMDownstreamTranscoder?,
         entityName: String?,
         predicateForObjectsToDownload: NSPredicate?,
@@ -70,7 +70,7 @@ public class ZMDownstreamObjectSyncWithWhitelist: NSObject, ZMObjectSync, ZMDown
     }
 
     /// Adds an object to the whitelist. It will later be removed once downloaded and not matching the whitelist predicate
-    func whiteListObject(_ object: ZMManagedObject) {
+    public func whiteListObject(_ object: ZMManagedObject) {
         whitelist?.add(object)
         innerDownstreamSync?.objectsDidChange(
              Set<NSManagedObject>([object])
