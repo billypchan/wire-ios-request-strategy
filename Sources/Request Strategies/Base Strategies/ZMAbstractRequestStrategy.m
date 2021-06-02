@@ -43,15 +43,6 @@ static NSString* ZMLogTag ZM_UNUSED = @"Request Configuration";
     return nil;
 }
 
-- (ZMTransportRequest *)nextRequest
-{
-    if ([self configuration:self.configuration isSubsetOfPrerequisites:[AbstractRequestStrategy prerequisitesForApplicationStatus:self.applicationStatus]]) {
-        return [self nextRequestIfAllowed];
-    }
-    
-    return nil;
-}
-
 - (BOOL)configuration:(ZMStrategyConfigurationOption)configuration isSubsetOfPrerequisites:(ZMStrategyConfigurationOption)prerequisites
 {
     ZMStrategyConfigurationOption option = 0;

@@ -25,7 +25,7 @@
 @class NSManagedObjectContext;
 @protocol ZMApplicationStatus;
 
-@interface ZMAbstractRequestStrategy : NSObject <RequestStrategy>
+@interface ZMAbstractRequestStrategy : NSObject //<RequestStrategy>
 
 @property (nonatomic, readonly, nonnull) NSManagedObjectContext *managedObjectContext;
 @property (nonatomic, readonly) ZMStrategyConfigurationOption configuration;
@@ -35,4 +35,5 @@
 
 - (ZMTransportRequest * _Nullable)nextRequestIfAllowed;
 
+- (BOOL)configuration:(ZMStrategyConfigurationOption)configuration isSubsetOfPrerequisites:(ZMStrategyConfigurationOption)prerequisites;
 @end
