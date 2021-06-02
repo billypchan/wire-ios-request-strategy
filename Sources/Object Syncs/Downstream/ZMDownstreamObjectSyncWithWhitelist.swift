@@ -47,7 +47,7 @@ class ZMDownstreamObjectSyncWithWhitelist: NSObject, ZMObjectSync, ZMDownstreamT
     {
         return innerDownstreamSync?.hasOutstandingItems ?? false
     }
-    private var whitelist: Set<AnyHashable>?
+    private var whitelist: NSMutableSet?
     
     /// actually it is alway created when init, but it is depends on self so it has to be a var
     private var innerDownstreamSync: ZMDownstreamObjectSync?
@@ -70,7 +70,11 @@ class ZMDownstreamObjectSyncWithWhitelist: NSObject, ZMObjectSync, ZMDownstreamT
     }
 
     /// Adds an object to the whitelist. It will later be removed once downloaded and not matching the whitelist predicate
-    func whiteListObject(_ object: ZMManagedObject?) {
+    func whiteListObject(_ object: ZMManagedObject) {
+        whitelist?.add(object)
+        innerDownstreamSync?.objectsDidChange(
+             Set<NSManagedObject>([object])
+        )
     }
 
     /// Returns a request to download the next object
