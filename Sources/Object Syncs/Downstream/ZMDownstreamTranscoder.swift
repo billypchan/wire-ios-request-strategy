@@ -114,10 +114,6 @@ class ZMDownstreamObjectSync: NSObject, ZMObjectSync {
         managedObjectContext moc: NSManagedObjectContext?
     ) {
         
-        if filter == nil {
-            
-        }
-        
         ///TODO: guard
 //        VerifyReturnNil(transcoder != nil)
 //        VerifyReturnNil(operationSet != nil)
@@ -144,7 +140,14 @@ class ZMDownstreamObjectSync: NSObject, ZMObjectSync {
         weak var transcoder = self.transcoder
 
         var nextObject: ZMManagedObject?
-        while (nextObject = objectsToDownload?.nextObjectToSynchronize()) != nil {
+        
+        while true {
+            
+            nextObject = objectsToDownload?.nextObjectToSynchronize()
+            
+            if nextObject == nil {
+                break
+            }
 
             if false == predicateForObjectsToDownload?.evaluate(with: nextObject) {
                 objectsToDownload?.remove(nextObject)
