@@ -35,8 +35,6 @@
 		1662ADD122B14CBA00D84071 /* VerifyLegalHoldRequestStrategyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1662ADD022B14CBA00D84071 /* VerifyLegalHoldRequestStrategyTests.swift */; };
 		1669016E1D707509000FE4AF /* WireRequestStrategy.h in Headers */ = {isa = PBXBuildFile; fileRef = 1669016D1D707509000FE4AF /* WireRequestStrategy.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		166901D01D7081C7000FE4AF /* ZMContextChangeTracker.h in Headers */ = {isa = PBXBuildFile; fileRef = 166901A81D7081C7000FE4AF /* ZMContextChangeTracker.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		166901D31D7081C7000FE4AF /* ZMDownstreamObjectSync.h in Headers */ = {isa = PBXBuildFile; fileRef = 166901AB1D7081C7000FE4AF /* ZMDownstreamObjectSync.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		166901D41D7081C7000FE4AF /* ZMDownstreamObjectSync.m in Sources */ = {isa = PBXBuildFile; fileRef = 166901AC1D7081C7000FE4AF /* ZMDownstreamObjectSync.m */; };
 		166901D51D7081C7000FE4AF /* ZMDownstreamObjectSyncWithWhitelist.h in Headers */ = {isa = PBXBuildFile; fileRef = 166901AD1D7081C7000FE4AF /* ZMDownstreamObjectSyncWithWhitelist.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		166901D61D7081C7000FE4AF /* ZMDownstreamObjectSyncWithWhitelist.m in Sources */ = {isa = PBXBuildFile; fileRef = 166901AE1D7081C7000FE4AF /* ZMDownstreamObjectSyncWithWhitelist.m */; };
 		166901D71D7081C7000FE4AF /* ZMDownstreamObjectSyncWithWhitelist+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 166901AF1D7081C7000FE4AF /* ZMDownstreamObjectSyncWithWhitelist+Internal.h */; };
@@ -256,8 +254,6 @@
 		166901861D7075D7000FE4AF /* version.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = version.xcconfig; sourceTree = "<group>"; };
 		166901961D7075D7000FE4AF /* WireRequestStrategy.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = WireRequestStrategy.xcconfig; sourceTree = "<group>"; };
 		166901A81D7081C7000FE4AF /* ZMContextChangeTracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZMContextChangeTracker.h; sourceTree = "<group>"; };
-		166901AB1D7081C7000FE4AF /* ZMDownstreamObjectSync.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZMDownstreamObjectSync.h; sourceTree = "<group>"; };
-		166901AC1D7081C7000FE4AF /* ZMDownstreamObjectSync.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZMDownstreamObjectSync.m; sourceTree = "<group>"; };
 		166901AD1D7081C7000FE4AF /* ZMDownstreamObjectSyncWithWhitelist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZMDownstreamObjectSyncWithWhitelist.h; sourceTree = "<group>"; };
 		166901AE1D7081C7000FE4AF /* ZMDownstreamObjectSyncWithWhitelist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZMDownstreamObjectSyncWithWhitelist.m; sourceTree = "<group>"; };
 		166901AF1D7081C7000FE4AF /* ZMDownstreamObjectSyncWithWhitelist+Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ZMDownstreamObjectSyncWithWhitelist+Internal.h"; sourceTree = "<group>"; };
@@ -913,8 +909,6 @@
 			isa = PBXGroup;
 			children = (
 				F1CD5D8A2024C51B008C574E /* Helpers */,
-				166901AB1D7081C7000FE4AF /* ZMDownstreamObjectSync.h */,
-				166901AC1D7081C7000FE4AF /* ZMDownstreamObjectSync.m */,
 				A98682B12667940B0064581B /* ZMDownstreamTranscoder.swift */,
 				166902181D709110000FE4AF /* ZMDownstreamObjectSyncTests.m */,
 				166902171D709110000FE4AF /* ZMDownstreamObjectSyncOrderingTests.m */,
@@ -1012,7 +1006,6 @@
 				F18401B32073BE0800E9F4CC /* ZMAbstractRequestStrategy.h in Headers */,
 				166901F11D7081C7000FE4AF /* ZMUpstreamModifiedObjectSync.h in Headers */,
 				166901F41D7081C7000FE4AF /* ZMUpstreamRequest.h in Headers */,
-				166901D31D7081C7000FE4AF /* ZMDownstreamObjectSync.h in Headers */,
 				F18402132073C56C00E9F4CC /* RequestStrategy.h in Headers */,
 				F18401D62073BE0800E9F4CC /* ZMStrategyConfigurationOption.h in Headers */,
 				1669016E1D707509000FE4AF /* WireRequestStrategy.h in Headers */,
@@ -1216,7 +1209,6 @@
 				5E68F22722452CDC00298376 /* LinkPreprocessor.swift in Sources */,
 				A98682C02667B8460064581B /* ZMDownstreamObjectSyncWithWhitelist.swift in Sources */,
 				EE997A18250654B0008336D2 /* Logging.swift in Sources */,
-				166901D41D7081C7000FE4AF /* ZMDownstreamObjectSync.m in Sources */,
 				A98682AE266793C20064581B /* ZMSingleRequestSync.swift in Sources */,
 				F18401C32073BE0800E9F4CC /* AssetV3DownloadRequestStrategy.swift in Sources */,
 				F18401BF2073BE0800E9F4CC /* AssetClientMessageRequestStrategy.swift in Sources */,

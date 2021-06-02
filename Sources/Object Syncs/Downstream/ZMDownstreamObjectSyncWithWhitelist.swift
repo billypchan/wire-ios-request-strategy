@@ -11,7 +11,7 @@ import Foundation
 //class ZMDownstreamObjectSyncWithWhitelist: ZMDownstreamTranscoder {
 //}
 
-class ZMDownstreamObjectSyncWithWhitelist: NSObject, ZMObjectSync, ZMDownstreamTranscoder {
+public class ZMDownstreamObjectSyncWithWhitelist: NSObject, ZMObjectSync, ZMDownstreamTranscoder {
     func request(forFetching object: ZMManagedObject!, downstreamSync: ZMObjectSync!) -> ZMTransportRequest! {
         return transcoder?.request(forFetching: object, downstreamSync: self)
     }

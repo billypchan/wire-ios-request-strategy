@@ -105,7 +105,7 @@ public class ZMDownstreamObjectSync: NSObject, ZMObjectSync {
 //    }
 
 //    @objc
-    init?(
+    public init?(
         transcoder: ZMDownstreamTranscoder?,
         operationSet: ZMSyncOperationSet? = ZMSyncOperationSet(),
         entityName: String?,
