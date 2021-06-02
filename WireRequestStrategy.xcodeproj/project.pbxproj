@@ -103,6 +103,8 @@
 		A961236E2664F1420023DE6F /* OCMock.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = A961236D2664F1420023DE6F /* OCMock.xcframework */; };
 		A96123712664F8850023DE6F /* ZMTBaseTests+CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167BCBC326087F8900E9D7E3 /* ZMTBaseTests+CoreDataStack.swift */; };
 		A98682A426678F1B0064581B /* ZMAbstractRequestStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98682A326678F1B0064581B /* ZMAbstractRequestStrategy.swift */; };
+		A98682AE266793C20064581B /* ZMSingleRequestSync.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98682AD266793C20064581B /* ZMSingleRequestSync.swift */; };
+		A98682B22667940B0064581B /* ZMDownstreamTranscoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98682B12667940B0064581B /* ZMDownstreamTranscoder.swift */; };
 		BF1F52C61ECC74E5002FB553 /* Array+RequestGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1F52C51ECC74E5002FB553 /* Array+RequestGenerator.swift */; };
 		BF7D9BE11D8C351900949267 /* WireRequestStrategy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1669016A1D707509000FE4AF /* WireRequestStrategy.framework */; };
 		BFF9446620F5F79F00531BC3 /* ImageV2DownloadRequestStrategyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF9446520F5F79F00531BC3 /* ImageV2DownloadRequestStrategyTests.swift */; };
@@ -336,6 +338,8 @@
 		A96123692664F1370023DE6F /* WireTesting.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = WireTesting.xcframework; path = Carthage/Build/WireTesting.xcframework; sourceTree = "<group>"; };
 		A961236D2664F1420023DE6F /* OCMock.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = OCMock.xcframework; path = Carthage/Build/OCMock.xcframework; sourceTree = "<group>"; };
 		A98682A326678F1B0064581B /* ZMAbstractRequestStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZMAbstractRequestStrategy.swift; sourceTree = "<group>"; };
+		A98682AD266793C20064581B /* ZMSingleRequestSync.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZMSingleRequestSync.swift; sourceTree = "<group>"; };
+		A98682B12667940B0064581B /* ZMDownstreamTranscoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZMDownstreamTranscoder.swift; sourceTree = "<group>"; };
 		BF1F52C51ECC74E5002FB553 /* Array+RequestGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+RequestGenerator.swift"; sourceTree = "<group>"; };
 		BFF9446520F5F79F00531BC3 /* ImageV2DownloadRequestStrategyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageV2DownloadRequestStrategyTests.swift; sourceTree = "<group>"; };
 		D5D65A052073C8F800D7F3C3 /* AssetRequestFactoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetRequestFactoryTests.swift; sourceTree = "<group>"; };
@@ -823,6 +827,7 @@
 			children = (
 				166901BB1D7081C7000FE4AF /* ZMSingleRequestSync.h */,
 				166901BC1D7081C7000FE4AF /* ZMSingleRequestSync.m */,
+				A98682AD266793C20064581B /* ZMSingleRequestSync.swift */,
 				166902201D709110000FE4AF /* ZMSingleRequestSyncTests.m */,
 				166901C31D7081C7000FE4AF /* ZMTimedSingleRequestSync.h */,
 				166901C41D7081C7000FE4AF /* ZMTimedSingleRequestSync.m */,
@@ -910,6 +915,7 @@
 				F1CD5D8A2024C51B008C574E /* Helpers */,
 				166901AB1D7081C7000FE4AF /* ZMDownstreamObjectSync.h */,
 				166901AC1D7081C7000FE4AF /* ZMDownstreamObjectSync.m */,
+				A98682B12667940B0064581B /* ZMDownstreamTranscoder.swift */,
 				166902181D709110000FE4AF /* ZMDownstreamObjectSyncTests.m */,
 				166902171D709110000FE4AF /* ZMDownstreamObjectSyncOrderingTests.m */,
 				166901AD1D7081C7000FE4AF /* ZMDownstreamObjectSyncWithWhitelist.h */,
@@ -1188,6 +1194,7 @@
 				166A22912577C06B00EF313D /* ResetSessionRequestStrategy.swift in Sources */,
 				166901E41D7081C7000FE4AF /* ZMSingleRequestSync.m in Sources */,
 				F18401BA2073BE0800E9F4CC /* LinkPreviewUploadRequestStrategy.swift in Sources */,
+				A98682B22667940B0064581B /* ZMDownstreamTranscoder.swift in Sources */,
 				16A86B2722A128A800A674F8 /* IdentifierObjectSync.swift in Sources */,
 				F18401C82073BE0800E9F4CC /* AssetDownloadRequestFactory.swift in Sources */,
 				166901F51D7081C7000FE4AF /* ZMUpstreamRequest.m in Sources */,
@@ -1208,6 +1215,7 @@
 				5E68F22722452CDC00298376 /* LinkPreprocessor.swift in Sources */,
 				EE997A18250654B0008336D2 /* Logging.swift in Sources */,
 				166901D41D7081C7000FE4AF /* ZMDownstreamObjectSync.m in Sources */,
+				A98682AE266793C20064581B /* ZMSingleRequestSync.swift in Sources */,
 				F18401C32073BE0800E9F4CC /* AssetV3DownloadRequestStrategy.swift in Sources */,
 				F18401BF2073BE0800E9F4CC /* AssetClientMessageRequestStrategy.swift in Sources */,
 				547D47171E7C1B0D002EEA15 /* DependentObjects.swift in Sources */,

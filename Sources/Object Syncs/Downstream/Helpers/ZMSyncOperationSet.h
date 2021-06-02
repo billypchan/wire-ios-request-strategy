@@ -36,13 +36,13 @@
 - (ZMManagedObject *)nextObjectToSynchronize;
 
 /// This will internally capture the current state of the values for those given keys in order to check if they're still the same once -keysForWhichToApplyResultsAfterFinishedSynchronizingSyncWithToken:forObject:success: gets called.
-- (ZMSyncToken *)didStartSynchronizingKeys:(NSSet *)keys forObject:(ZMManagedObject *)mo;
+- (id)didStartSynchronizingKeys:(NSSet *)keys forObject:(ZMManagedObject *)mo;
 
 /// Returns the keys for which resulting changes should be applied to the model.
 /// If the model has had additional changes to any of the keys for which the sync was being performed, there will not be included in the set.
-- (NSSet *)keysForWhichToApplyResultsAfterFinishedSynchronizingSyncWithToken:(ZMSyncToken *)token forObject:(ZMManagedObject *)mo result:(ZMTransportResponseStatus)status;
+- (NSSet *)keysForWhichToApplyResultsAfterFinishedSynchronizingSyncWithToken:(id)token forObject:(ZMManagedObject *)mo result:(ZMTransportResponseStatus)status;
 
-- (void)removeUpdatedObject:(ZMManagedObject *)mo syncToken:(ZMSyncToken *)token synchronizedKeys:(NSSet *)synchronizedKeys;
+- (void)removeUpdatedObject:(ZMManagedObject *)mo syncToken:(id)token synchronizedKeys:(NSSet *)synchronizedKeys;
 
 /// Removes an object from the set
 - (void)removeObject:(ZMManagedObject *)mo;
