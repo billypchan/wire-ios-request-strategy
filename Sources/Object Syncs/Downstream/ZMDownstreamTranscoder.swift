@@ -9,7 +9,7 @@
 import Foundation
 import WireTransport
 
-class ZMDownstreamObjectSync: NSObject, ZMObjectSync {
+public class ZMDownstreamObjectSync: NSObject, ZMObjectSync {
     
     private weak var transcoder: ZMDownstreamTranscoder?
     private var objectsToDownload: ZMSyncOperationSet?
@@ -21,7 +21,7 @@ class ZMDownstreamObjectSync: NSObject, ZMObjectSync {
     private(set) var entity: NSEntityDescription?
 
     //MARK: ZMObjectSync
-    func objectsDidChange(_ objects: Set<NSManagedObject>) {
+    public func objectsDidChange(_ objects: Set<NSManagedObject>) {
         for mo in objects {
             guard let mo = mo as? ZMManagedObject else {
                 continue
@@ -35,14 +35,14 @@ class ZMDownstreamObjectSync: NSObject, ZMObjectSync {
         }
     }
     
-    func fetchRequestForTrackedObjects() -> NSFetchRequest<NSFetchRequestResult>? {
+    public func fetchRequestForTrackedObjects() -> NSFetchRequest<NSFetchRequestResult>? {
         let request = NSFetchRequest<NSFetchRequestResult>()
         request.entity = entity
         request.predicate = predicateForObjectsToDownload
         return request
     }
     
-    func addTrackedObjects(_ objects: Set<NSManagedObject>) {
+    public func addTrackedObjects(_ objects: Set<NSManagedObject>) {
         for mo in objects {
             guard let mo = mo as? ZMManagedObject else {
                 continue
@@ -57,7 +57,7 @@ class ZMDownstreamObjectSync: NSObject, ZMObjectSync {
         return predicateForObjectsToDownload?.evaluate(with: object) == true && (filter == nil || filter?.evaluate(with: object) == true)
     }
     
-    var hasOutstandingItems: Bool {
+    public var hasOutstandingItems: Bool {
         return 0 < objectsToDownload?.count ?? 0
     }
 //    override init() {
@@ -136,7 +136,7 @@ class ZMDownstreamObjectSync: NSObject, ZMObjectSync {
     }
     
     
-    func nextRequest() -> ZMTransportRequest? {
+    public func nextRequest() -> ZMTransportRequest? {
         weak var transcoder = self.transcoder
 
         var nextObject: ZMManagedObject?
@@ -194,7 +194,7 @@ class ZMDownstreamObjectSync: NSObject, ZMObjectSync {
     }
 }
 
-protocol ZMDownstreamTranscoder: NSObjectProtocol {
+public protocol ZMDownstreamTranscoder: NSObjectProtocol {
     func request(forFetching object: ZMManagedObject!, downstreamSync: ZMObjectSync!) -> ZMTransportRequest!
     func delete(_ object: ZMManagedObject!, with response: ZMTransportResponse!, downstreamSync: ZMObjectSync!)
     func update(_ object: ZMManagedObject!, with response: ZMTransportResponse!, downstreamSync: ZMObjectSync!)

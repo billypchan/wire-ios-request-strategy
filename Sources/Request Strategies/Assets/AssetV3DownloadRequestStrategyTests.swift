@@ -39,7 +39,7 @@ public class MockTaskCancellationProvider: NSObject, ZMRequestCancellation {
     }
 }
 
-
+//TODO: suck here
 class AssetV3DownloadRequestStrategyTests: MessagingTestBase {
 
     var mockApplicationStatus: MockApplicationStatus!
@@ -288,6 +288,7 @@ extension AssetV3DownloadRequestStrategyTests {
             let response = ZMTransportResponse(payload: [] as ZMTransportData, httpStatus: 404, transportSessionError: .none)
             
             // WHEN
+            ///TODO: nil here?
             request?.complete(with: response)
         }
         XCTAssert(waitForAllGroupsToBeEmpty(withTimeout: 0.5))
@@ -403,6 +404,7 @@ extension AssetV3DownloadRequestStrategyTests {
         }
     }
 
+    ///TODO: suck here
     func testThatItSendsNonCoreDataChangeNotification_AfterSuccessfullyDownloadingAsset() {
         
         // GIVEN
